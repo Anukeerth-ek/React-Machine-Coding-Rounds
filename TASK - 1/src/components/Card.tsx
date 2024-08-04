@@ -4,13 +4,16 @@ import { ImageCard } from "./ImageCard";
 const Card = () => {
      const [data, setData] = useState([]);
      const [limit, setLimit] = useState(8);
+     // const [loading, setLoading] = useState(true)
      const initialValue = 0;
-     
+
      useEffect(() => {
           const fetchApiData = () => {
+               // setLoading(true)
                fetch(`https://jsonplaceholder.typicode.com/photos`)
                     .then((res) => res.json())
                     .then((data) => setData(data.slice(initialValue, limit)));
+                    // setLoading(false)
           };
           fetchApiData();
      }, [limit]);
