@@ -24,7 +24,7 @@ const FaqSection = (props: any) => {
                                    <p className="text-xl">{item.question}</p>
                               </div>
 
-                              {faqId === item.id ? <p className="text-gray-700 ml-10 mt-1">{item.answer}</p> : ""}
+                              {faqId === item.id && <p className="text-gray-700 ml-10 mt-1">{item.answer}</p>}
                          </div>
                     );
                })}
