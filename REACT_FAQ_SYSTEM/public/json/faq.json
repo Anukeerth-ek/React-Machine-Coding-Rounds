@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "question": "What is React?",
+    "answer": "React is a JavaScript library for building user interfaces, maintained by Facebook and a community of developers. It allows you to create reusable UI components and manage the state of your application efficiently."
+  },
+  {
+    "id": 2,
+    "question": "How does React work?",
+    "answer": "React works by creating a virtual DOM to efficiently update the real DOM. When the state of a component changes, React updates the virtual DOM first and then calculates the difference between the virtual DOM and the real DOM, applying the minimal set of changes to the real DOM."
+  },
+  {
+    "id": 3,
+    "question": "What is the difference between state and props in React?",
+    "answer": "In React, `props` (short for properties) are used to pass data from parent to child components. They are immutable and cannot be changed by the child component. `State`, on the other hand, is managed within the component and can be changed using `setState` or the `useState` hook. State is used to manage data that can change over time."
+  },
+  {
+    "id": 4,
+    "question": "What are React hooks?",
+    "answer": "React hooks are functions that let you use state and other React features without writing a class. Common hooks include `useState` for managing state and `useEffect` for performing side effects. Hooks allow you to write functional components that manage state and lifecycle events."
+  },
+  {
+    "id": 5,
+    "question": "What is JSX?",
+    "answer": "JSX (JavaScript XML) is a syntax extension for JavaScript that looks similar to HTML. It allows you to write HTML-like code within JavaScript, making it easier to describe the UI structure. JSX is compiled into JavaScript functions that create React elements."
+  },
+  {
+    "id": 6,
+    "question": "What is the virtual DOM?",
+    "answer": "The virtual DOM is a lightweight representation of the actual DOM. React maintains a virtual DOM to optimize updates and minimize the performance impact of re-rendering by only updating the parts of the DOM that have changed."
+  },
+  {
+    "id": 7,
+    "question": "What is component lifecycle?",
+    "answer": "The component lifecycle in React refers to the series of methods that are invoked in different stages of a component's existence, such as mounting, updating, and unmounting. Lifecycle methods include `componentDidMount`, `componentDidUpdate`, and `componentWillUnmount`."
+  },
+  {
+    "id": 8,
+    "question": "What is Redux?",
+    "answer": "Redux is a state management library often used with React to manage global state. It provides a predictable state container and uses actions, reducers, and a store to manage and update application state in a consistent manner."
+  },
+  {
+    "id": 9,
+    "question": "What are controlled components?",
+    "answer": "Controlled components are form elements whose value is controlled by React state. Instead of the DOM managing the form element's value, React manages it through state, allowing for better control and validation of form inputs."
+  },
+  {
+    "id": 10,
+    "question": "What is the purpose of `useEffect`?",
+    "answer": "`useEffect` is a hook that lets you perform side effects in functional components, such as data fetching, subscriptions, or manually changing the DOM. It runs after the component renders and can be configured to run only when specific dependencies change."
+  },
+  {
+    "id": 11,
+    "question": "What is a higher-order component (HOC)?",
+    "answer": "A higher-order component (HOC) is a function that takes a component and returns a new component with additional props or functionality. HOCs are used for code reuse and adding common behavior to multiple components."
+  },
+  {
+    "id": 12,
+    "question": "What is the `useContext` hook?",
+    "answer": "`useContext` is a hook that allows you to access the value of a React Context directly from a functional component. It simplifies the consumption of context without needing to use the Context.Consumer component."
+  },
+  {
+    "id": 13,
+    "question": "What is a React Fragment?",
+    "answer": "A React Fragment is a lightweight wrapper component that allows you to group multiple elements without adding extra nodes to the DOM. It helps avoid unnecessary HTML elements and keeps the DOM tree clean."
+  },
+  {
+    "id": 14,
+    "question": "What is the purpose of `React.memo`?",
+    "answer": "`React.memo` is a higher-order component that memoizes the result of a component's render, preventing unnecessary re-renders when the props have not changed. It helps optimize performance for functional components."
+  },
+  {
+    "id": 15,
+    "question": "How do you handle errors in React components?",
+    "answer": "Error boundaries are React components that catch JavaScript errors anywhere in their child component tree and display a fallback UI instead of crashing the whole app. You can create an error boundary by implementing the `componentDidCatch` method or using the `ErrorBoundary` component from libraries like `react-error-boundary`."
+  }
+]
