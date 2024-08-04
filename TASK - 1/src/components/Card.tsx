@@ -5,17 +5,7 @@ const Card = () => {
      const [data, setData] = useState([]);
      const [limit, setLimit] = useState(8);
      const initialValue = 0;
-
-     useEffect(() => {
-          const handleInfiniteScroll = () => {
-               if (window.innerHeight + document.documentElement.scrollTop + 2 >= document.documentElement.scrollHeight) {
-                    setLimit(limit + 8 );
-                    console.log(limit);
-               }
-          };
-          document.addEventListener("scroll", handleInfiniteScroll);
-     }, [limit]);
-
+     
      useEffect(() => {
           const fetchApiData = () => {
                fetch(`https://jsonplaceholder.typicode.com/photos`)
@@ -24,6 +14,20 @@ const Card = () => {
           };
           fetchApiData();
      }, [limit]);
+
+     useEffect(() => {
+          const handleInfiniteScroll = () => {
+               if (window.innerHeight + document.documentElement.scrollTop + 1 >= document.documentElement.scrollHeight) {
+                    setLimit((prevLimit) => prevLimit + 8);
+               }
+          };
+          document.addEventListener("scroll", handleInfiniteScroll);
+          return () => {
+               window.removeEventListener("scroll", handleInfiniteScroll);
+          };
+     }, []);
+
+
      return (
           <div>
                <div>
