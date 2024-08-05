@@ -5,9 +5,9 @@ const Header = ({ heading }: ReactFormHeading) => {
           <header>
                <nav>
                     <div className="bg-cyan-600  ">
-                         <div className="flex items-start justify-between py-8 px-10 ">
-                              <h2 className="text-2xl font-bold shadow-inner">{heading}</h2>
-                              <ul className="flex items-center gap-x-6 cursor-pointer ">
+                         <div className="flex items-start justify-between py-8 px-3 md:px-10 ">
+                              <h2 className=" text-lg md:text-2xl font-bold shadow-inner ">{heading}</h2>
+                              <ul className="flex items-center gap-x-3 md:gap-x-6 cursor-pointer ">
                                    {headingList.map((item, index) => {
                                         const baseStyles = `hover:scale-x-150 duration-150 text-black hover:-skew-x-6`;
                                         const hoverColorStyle = `hover:${item.hoverColor}`;

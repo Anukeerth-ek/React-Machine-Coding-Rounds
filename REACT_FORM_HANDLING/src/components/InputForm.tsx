@@ -13,12 +13,12 @@ const InputForm = ({ heading }: ReactFormHeading) => {
     console.log(event.target.value)
     }
      return (
-          <div className="flex flex-col items-center flex-wrap justify-center">
+          <div className="flex flex-col  items-center flex-wrap justify-center">
                <h2 className="text-2xl font-bold mt-8 mb-6">{heading}</h2>
                <div className="w-[380px] ">
                     <form
                          action=""
-                         className="mx-auto flex flex-col border-2 border-slate-300 rounded-md py-3 px-5 text-left"
+                         className="md:mx-auto flex flex-col border-2 border-slate-300 rounded-md py-3 md:px-5 px-3 mx-3 text-left"
                          
                     >
                          {formData.map((item, index) => (
