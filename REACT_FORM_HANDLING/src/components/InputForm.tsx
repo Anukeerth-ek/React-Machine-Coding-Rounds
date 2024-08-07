@@ -8,8 +8,14 @@ const InputForm = ({ heading }: ReactFormHeading) => {
           username: '',
           password: ''
      });
+     interface ErrorsTypes {
+          email?: string;
+          password?: string;
+          username?: string;
+          // Add other possible fields as needed
+      }
 
-     const [errors, setErrors] = useState({})
+     const [errors, setErrors] = useState<ErrorsTypes | any>({})
      // function for handling the form
      const handleformInput = (event:any) => {
          event.preventDefault()
@@ -41,10 +47,13 @@ const InputForm = ({ heading }: ReactFormHeading) => {
           if(!inputFormData.email) newErrors.email = "Email is required";
           if(!inputFormData.password) newErrors.password  = "Password is required";
           if(!inputFormData.username) newErrors.username = "User name is required"
-
+          console.log(newErrors.username)
           return newErrors
+
      }
-     handleValidation()
+    
+console.log("Errors:", errors)
+
      return (
           <div className="flex flex-col  items-center flex-wrap justify-center">
                <h2 className="text-2xl font-bold mt-8 mb-6">{heading}</h2>
@@ -65,6 +74,7 @@ const InputForm = ({ heading }: ReactFormHeading) => {
                                         id={item.id}
                                         onChange={handleInputChange}
                                    />
+                                {errors[item.name] && <p className="text-red-600 -translate-y-4">Please fill {item.name} correctly</p>}
                               </React.Fragment>
                          ))}
                          <button className="border duration-300 rounded-2xl px-8 py-3 bg-cyan-400 hover:bg-cyan-600 mt-8 text-white">
