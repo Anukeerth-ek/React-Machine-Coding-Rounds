@@ -3,15 +3,48 @@ import { ReactFormHeading } from "../types/types";
 import { formData } from "../utils/data";
 
 const InputForm = ({ heading }: ReactFormHeading) => {
-    const [inputFormData, SetInputFormData] = useState('')
-    // function for handling the form
-    const handleformInput = (event: React.ChangeEvent<HTMLInputElement>)=> {
-        SetInputFormData(event.target.value)
-        console.log(inputFormData)
-    }
-    const handleInputChange = (event:React.ChangeEvent<HTMLInputElement>)=> {
-    console.log(event.target.value)
-    }
+     const [inputFormData, setInputFormData] = useState({
+          email: '',
+          username: '',
+          password: ''
+     });
+
+     const [errors, setErrors] = useState({})
+     // function for handling the form
+     const handleformInput = (event:any) => {
+         event.preventDefault()
+         const validateErrors = handleValidation();
+         if(Object.keys(validateErrors).length === 0) {
+          console.log("Form submitted sucessfully", inputFormData)
+          alert("Form submitted successfully")
+         }
+         else {
+          setErrors(validateErrors)
+          alert("Please fill this correctly")
+         }
+     };
+     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+         const {name, value} = event.target;
+         setInputFormData({
+          ...inputFormData, [name]:value,
+         })
+     };
+     
+     interface ErrorTypes {
+          email?: string,
+          password?:string,
+          username?:string
+     }
+     // validate input form fields
+     const handleValidation = ()=> {
+          const newErrors:ErrorTypes = {};
+          if(!inputFormData.email) newErrors.email = "Email is required";
+          if(!inputFormData.password) newErrors.password  = "Password is required";
+          if(!inputFormData.username) newErrors.username = "User name is required"
+
+          return newErrors
+     }
+     handleValidation()
      return (
           <div className="flex flex-col  items-center flex-wrap justify-center">
                <h2 className="text-2xl font-bold mt-8 mb-6">{heading}</h2>
@@ -19,7 +52,7 @@ const InputForm = ({ heading }: ReactFormHeading) => {
                     <form
                          action=""
                          className="md:mx-auto flex flex-col border-2 border-slate-300 rounded-md py-3 md:px-5 px-3 mx-3 text-left"
-                         
+                         onSubmit={handleformInput}
                     >
                          {formData.map((item, index) => (
                               <React.Fragment key={index}>

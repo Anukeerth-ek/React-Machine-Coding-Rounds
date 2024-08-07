@@ -8,5 +8,5 @@ export const headingList: HeadingListType[] = [
 ];
 
 export const formData: formDataTypes[] = [
-    {label: "UserName", placeholder: "UserName", type:"email",  name: "username", id: "username"}, {label: "Email", placeholder: "Email", type:"text", name: "email", id: "email"}, {label: "Password", placeholder: "Password", type:"password", name: "password", id: "password"}
+    {label: "UserName", placeholder: "UserName", type:"text",  name: "username", id: "username"}, {label: "Email", placeholder: "Email", type:"email", name: "email", id: "email"}, {label: "Password", placeholder: "Password", type:"password", name: "password", id: "password"}
 ]
