@@ -3,64 +3,57 @@ import { ReactFormHeading } from "../types/types";
 import { formData } from "../utils/data";
 
 const InputForm = ({ heading }: ReactFormHeading) => {
+
      const [inputFormData, setInputFormData] = useState({
-          email: '',
           username: '',
+          email: '',
           password: ''
-     });
-     interface ErrorsTypes {
-          email?: string;
-          password?: string;
-          username?: string;
-          // Add other possible fields as needed
-      }
+     })
 
-     const [errors, setErrors] = useState<ErrorsTypes | any>({})
-     // function for handling the form
-     const handleformInput = (event:any) => {
-         event.preventDefault()
-         const validateErrors = handleValidation();
-         if(Object.keys(validateErrors).length === 0) {
-          console.log("Form submitted sucessfully", inputFormData)
-          alert("Form submitted successfully")
-         }
-         else {
-          setErrors(validateErrors)
-          alert("Please fill this correctly")
-         }
-     };
-     const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-         const {name, value} = event.target;
-         setInputFormData({
-          ...inputFormData, [name]:value,
-         })
-     };
-     
-     interface ErrorTypes {
-          email?: string,
-          password?:string,
-          username?:string
+     const [errors, setError] = useState<any>({})
+   
+  const handleformInput = (e:any)=> {
+     e.preventDefault()
+
+     const validateError = handleValidation()
+     if(Object.keys(validateError).length === 0) {
+          console.log("Form submitted succesfully");
+          alert("Sucess")
      }
-     // validate input form fields
-     const handleValidation = ()=> {
-          const newErrors:ErrorTypes = {};
-          if(!inputFormData.email) newErrors.email = "Email is required";
-          if(!inputFormData.password) newErrors.password  = "Password is required";
-          if(!inputFormData.username) newErrors.username = "User name is required"
-          console.log(newErrors.username)
-          return newErrors
-
+     else {
+          setError(validateError)
+         
      }
-    
-console.log("Errors:", errors)
+  }
 
+
+const handleInputChange = (e:any)=> {
+     const {name, value} = e.target;
+     setInputFormData({
+          ...inputFormData, [name]:value
+     })
+}
+
+interface StoreErrorTypes {
+     username?: string,
+     email?: string,
+     password?: string
+}
+const handleValidation = ()=> {
+     const storeError:StoreErrorTypes = {}
+     if(!inputFormData.username) storeError.username = "username can't be empty"
+     if(!inputFormData.email) storeError.email = "email can't be empty"
+     if(!inputFormData.password) storeError.password = "password can't be empty"
+
+     return storeError;
+}
      return (
           <div className="flex flex-col  items-center flex-wrap justify-center">
                <h2 className="text-2xl font-bold mt-8 mb-6">{heading}</h2>
-               <div className="w-[380px] ">
+               <div className=" w-[340px] md:w-[380px] ">
                     <form
                          action=""
-                         className="md:mx-auto flex flex-col border-2 border-slate-300 rounded-md py-3 md:px-5 px-3 mx-3 text-left"
+                         className="md:mx-auto flex flex-col border-2 border-slate-300 rounded-md py-3 md:px-5 px-3  text-left"
                          onSubmit={handleformInput}
                     >
                          {formData.map((item, index) => (
@@ -74,7 +67,7 @@ console.log("Errors:", errors)
                                         id={item.id}
                                         onChange={handleInputChange}
                                    />
-                                {errors[item.name] && <p className="text-red-600 -translate-y-4">Please fill {item.name} correctly</p>}
+                                {errors[item.name] && <p className="text-red-600 -translate-y-4">{errors[item.name]}</p>}
                               </React.Fragment>
                          ))}
                          <button className="border duration-300 rounded-2xl px-8 py-3 bg-cyan-400 hover:bg-cyan-600 mt-8 text-white">
