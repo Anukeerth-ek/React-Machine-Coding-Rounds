@@ -1,0 +1,83 @@
+[
+    {
+      "id": 1,
+      "title": "Apple MacBook Air M1",
+      "description": "Apple's thinnest and lightest notebook, supercharged by the Apple M1 chip.",
+      "image": "https://cdn.shoplightspeed.com/shops/638486/files/29683260/1600x2048x2/apple-13-inch-macbook-air-apple-m1.jpg",
+      "price": 999.99,
+      "rating": 4.8
+    },
+    {
+      "id": 2,
+      "title": "Dell XPS 13",
+      "description": "A compact and powerful laptop with an InfinityEdge display.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS41w9Nb7xj94LDiUisnYnodFterBjaxOcwsFv1rzo6lorCtYwr5Etb4dbCczEHGMz62Wo&usqp=CAU",
+      "price": 1199.99,
+      "rating": 4.7
+    },
+    {
+      "id": 3,
+      "title": "HP Spectre x360",
+      "description": "A versatile 2-in-1 laptop with a stunning design and performance.",
+      "image": "https://www.paklap.pk/media/catalog/product/cache/2cc443e44e97595ea39006016c876eaa/h/p/hp-spectre-x360-convertible-13-aw000-cto-price-paklap.jpg",
+      "price": 1399.99,
+      "rating": 4.6
+    },
+    {
+      "id": 4,
+      "title": "Lenovo ThinkPad X1 Carbon",
+      "description": "A durable and high-performing laptop ideal for business professionals.",
+      "image": "https://m.media-amazon.com/images/I/71wJJL7q8nL.jpg",
+      "price": 1499.99,
+      "rating": 4.8
+    },
+    {
+      "id": 5,
+      "title": "Microsoft Surface Laptop 4",
+      "description": "Sleek design and powerful performance with all-day battery life.",
+      "image": "https://i.gadgets360cdn.com/products/large/Surface-Laptop-4-13-DB-950x800-1618386129.jpg",
+      "price": 1299.99,
+      "rating": 4.5
+    },
+    {
+      "id": 6,
+      "title": "ASUS ROG Zephyrus G14",
+      "description": "A compact gaming laptop with excellent performance and battery life.",
+      "image": "https://m.media-amazon.com/images/I/81WscwPhkmL.jpg",
+      "price": 1499.99,
+      "rating": 4.7
+    },
+
+    {
+      "id": 8,
+      "title": "Razer Blade 15",
+      "description": "A high-end gaming laptop with a sleek design and powerful specs.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJGgIy9JJYICd7QQP3kgvPw2f3JzQBBW-x3ZOfhvox8wOr7jB0Ot5cbbx9Q77Ls0nIDJU&usqp=CAU",
+      "price": 1999.99,
+      "rating": 4.6
+    },
+    {
+      "id": 9,
+      "title": "Samsung Galaxy Book Pro",
+      "description": "A premium laptop with an AMOLED display and ultra-slim design.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSF9LkEC1ivuGIBU2oRdk3yptftZJ2tU5RdPQ&s",
+      "price": 1199.99,
+      "rating": 4.4
+    },
+    {
+      "id": 10,
+      "title": "LG Gram 17",
+      "description": "A lightweight 17-inch laptop with a long battery life and impressive display.",
+      "image": "https://www.lg.com/content/dam/channel/wcms/in/images/computers/17z90r-g_ch77a2_eail_in_c/17Z90R-G-Laptop-front-view-450.jpg",
+      "price": 1699.99,
+      "rating": 4.5
+    },
+    {
+      "id": 11,
+      "title": "Google Pixelbook Go",
+      "description": "A lightweight and stylish Chromebook with excellent performance.",
+      "image": "https://5.imimg.com/data5/SELLER/Default/2021/8/YR/UG/NL/11078779/google-pixel-book-go.jpg",
+      "price": 849.99,
+      "rating": 4.3
+    }
+  ]
